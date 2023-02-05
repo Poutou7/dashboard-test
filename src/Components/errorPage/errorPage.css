@@ -1,0 +1,74 @@
+/***** Error Page *****/
+.error-page {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-page .left-page {
+  flex-basis: 40%;
+  flex-direction: column;
+}
+
+.error-page .left-page div {
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  width: 350px;
+  height: 350px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-page .left-page h1 {
+  font-size: 140px;
+  margin: 0;
+  color: #ccc;
+}
+
+.error-page .left-page p,
+.error-page .right-page p:first-of-type {
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.error-page .right-page {
+  flex: 1;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.error-page .right-page h1 {
+  font-size: 100px;
+  margin: 0;
+  color: #03a9f4;
+}
+
+.error-page .right-page p:first-of-type {
+  color: #333;
+  margin: 20px 0 55px;
+}
+
+.error-page .right-page p:last-of-type {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.error-page .right-page a {
+  color: #fff;
+  background-color: #8bc34a;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.error-page .right-page a:hover {
+  background-color: #5b8b23;
+}

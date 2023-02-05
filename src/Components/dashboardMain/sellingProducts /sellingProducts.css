@@ -1,0 +1,116 @@
+.selling-products {
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  color: var(--white-color);
+}
+
+.selling-products .names {
+  display: flex;
+  gap: 45px;
+}
+
+/*** Start Products ***/
+.selling-products .products h2 {
+  margin-bottom: 30px;
+  font-weight: 500px;
+}
+
+.selling-products .products .product:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(164 180 203 / 50%);
+  margin-bottom: 30px;
+}
+
+.selling-products .products .product .first-span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.selling-products .products .product .last-span {
+  font-size: 14px;
+  color: var(--bluelight-color);
+}
+
+.selling-products .products .product .total-price {
+  margin-left: 10px;
+  line-height: 15px;
+}
+
+.selling-products .product .chart div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.selling-products .product .chart div span {
+  color: var(--second-blue-color);
+}
+
+.selling-products .product .trend div {
+  gap: 10px;
+  color: var(--green-color);
+}
+
+.selling-products .product .reviews .stars {
+  color: #fe9518;
+}
+
+.selling-products .product .reviews i {
+  margin-right: 6px;
+  font-size: 21px;
+}
+
+.selling-products .products .product .title,
+.selling-products .product .chart div,
+.selling-products .product .trend div,
+.selling-products .product .reviews .stars {
+  margin-bottom: 10px;
+}
+
+/*** End Products ***/
+
+/*** Start Customers ***/
+.selling-products .customers {
+}
+.selling-products .customers li span {
+  font-size: 16px;
+  color: var(--bluelight-color);
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+/*** End Customers ***/
+
+/*** Start Employees ***/
+.selling-products .employees {
+}
+.selling-products .employees li {
+  gap: 15px;
+}
+.selling-products .employees img {}
+.selling-products .employees span {
+  color: var(--bluelight-color);
+  margin-top: 13px;
+}
+
+/*** End Employees ***/
+
+/*** Start Customers-Employees (Pesron) ***/
+.selling-products .person {
+  flex: 1;
+}
+.selling-products .person h2 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.selling-products .person ul,
+.selling-products .person ol {
+  font-weight: 500;
+  font-size: 18px;
+  list-style-position: inside;
+}
+.selling-products .person li:not(:last-child) {
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgb(164 180 203 / 50%);
+}
+/*** End Customers-Employees (Pesron) ***/

@@ -1,0 +1,313 @@
+/********** Start Dashboard Root **********/
+.dashboard {
+  display: flex;
+  background-color: var(--dark-blue-color);
+}
+
+.dashboard .content {
+  flex: 1;
+  position: relative;
+}
+
+.dashboard .outlet-dashboard {
+  padding: 0 25px 25px;
+}
+
+@media (max-width: 767px) {
+  .dashboard .outlet-dashboard {
+    padding: 25px 15px;
+  }
+}
+/********** End Dashboard Root **********/
+
+/********** Start NavDashboard **********/
+.nav-dashboard {
+  color: var(--white-color);
+  padding: 50px 40px;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+  .nav-dashboard {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav-dashboard p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .nav-dashboard .settings {
+    gap: 65px;
+  }
+  .nav-dashboard .settings .features {
+    gap: 30px;
+  }
+}
+
+.nav-dashboard .settings {
+  gap: 40px;
+}
+.nav-dashboard .settings .account {
+  gap: 10px;
+}
+
+.nav-dashboard .settings .account div {
+  position: relative;
+}
+
+.nav-dashboard .settings .account .profile-settings {
+  position: absolute;
+  background-color: var(--first-blue-color);
+  top: 25px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.nav-dashboard .settings .account .profile-settings form,
+.nav-dashboard .settings .account .profile-settings a {
+  opacity: 0;
+  transform: translateX(-130px);
+  transition: var(--transition);
+}
+
+.nav-dashboard .settings .account .profile-settings form {
+  cursor: pointer;
+  transition-delay: 0.5s;
+}
+
+.nav-dashboard .settings .account .profile-settings a {
+  color: var(--white-color);
+  font-weight: 500;
+  margin-bottom: 30px;
+  transition-delay: 0.3s;
+}
+
+.nav-dashboard .settings .account .showProfile {
+  width: 200px;
+  height: 110px;
+  padding: 20px;
+  opacity: 1;
+}
+
+.nav-dashboard .settings .account .showProfile a,
+.nav-dashboard .settings .account .showProfile form {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav-dashboard .settings .account .profile-settings input {
+  color: var(--white-color);
+  font-weight: 500;
+  margin: 0;
+  background-color: var(--first-blue-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-dashboard .settings .account .profile-settings a:hover,
+.nav-dashboard .settings .account .profile-settings form:hover input {
+  color: var(--second-blue-color);
+}
+
+.nav-dashboard .account span {
+  margin-bottom: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.nav-dashboard .account p {
+  color: var(--bluelight-color);
+  font-size: 14px;
+}
+
+.nav-dashboard .settings .features {
+  gap: 25px;
+}
+.nav-dashboard .features > span {
+  border-radius: 12px;
+  border: 1px solid rgb(164 180 203 / 30%);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-dashboard .features > span:last-of-type span,
+.nav-dashboard .features > span a {
+  position: absolute;
+}
+
+.nav-dashboard .features .chat a {
+  bottom: 2px;
+  left: 7px;
+}
+
+.nav-dashboard .features .bell a {
+  bottom: 2px;
+  left: 5px;
+}
+
+.nav-dashboard .features .chat a::after,
+.nav-dashboard .features .bell a::after {
+  content: attr(data-info);
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--red-color);
+  top: -7px;
+  right: -7px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.nav-dashboard .features .moon span {
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-dashboard .features .langs {
+  width: 71px;
+  color: var(--bluelight-color);
+  font-size: 14px;
+  padding: 0 10px;
+  position: relative;
+}
+.nav-dashboard .features .langs form {
+  position: absolute;
+  border: 1px solid rgb(164 180 203);
+  background-color: var(--middle-blue-color);
+  width: 50px;
+  overflow: hidden;
+  bottom: -63px;
+  z-index: 10;
+  right: 0;
+}
+.nav-dashboard .features .langs button {
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 7px 5px;
+  border: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-dashboard .features .langs button:hover {
+  background-color: var(--second-blue-color);
+}
+/********** End NavDashboard *********/
+
+/********** Start NavlinkDashboard **********/
+.navlink-dashboard {
+  flex-basis: 360px;
+  height: 1778px;
+  background-color: var(--first-blue-color);
+  padding: 35px 20px;
+  flex-shrink: 0;
+}
+
+.navlink-dashboard .logo {
+  margin-bottom: 55px;
+}
+
+.navlink-dashboard nav > ul > li {
+  margin-bottom: 57px;
+}
+.navlink-dashboard ul > li {
+  color: var(--white-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navlink-dashboard ul a {
+  color: var(--white-color);
+  transition: var(--transition);
+}
+
+.navlink-dashboard ul li .link-show {
+  position: relative;
+}
+
+.navlink-dashboard ul .link-show ul {
+  width: calc(100% + 40px);
+  box-shadow: inset 3px 3px 17px rgb(207 207 207 / 50%);
+  padding: 20px 25px;
+  margin-left: -20px;
+  position: absolute;
+  top: calc(-100% + -15px);
+  opacity: 0;
+  background-color: var(--first-blue-color);
+  z-index: 5;
+  transition: var(--transition);
+  visibility: hidden;
+}
+
+.navlink-dashboard ul li.active ul.show {
+  top: calc(100% + 15px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navlink-dashboard ul ul a {
+  font-size: 18px;
+}
+
+.navlink-dashboard ul ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.navlink-dashboard ul a.active,
+.navlink-dashboard ul a:hover {
+  color: var(--second-blue-color);
+}
+
+.navlink-dashboard ul li.logout {
+  width: fit-content;
+}
+
+.navlink-dashboard ul li.logout form {
+  display: flex;
+  gap: 25px;
+}
+
+.navlink-dashboard ul li.logout button {
+  background-color: var(--first-blue-color);
+  border: none;
+  cursor: pointer;
+}
+
+.navlink-dashboard .pos {
+  gap: 25px;
+  background-color: var(--middle-blue-color);
+  border-radius: 25px;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 13px rgb(58 194 203 / 20%);
+  transition: var(--transition);
+}
+
+.navlink-dashboard .pos:hover {
+  box-shadow: 0 0px 12px rgb(58 194 203 / 70%);
+}
+
+.navlink-dashboard .pos p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+/********** End NavlinkDashboard **********/
